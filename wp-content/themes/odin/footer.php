@@ -10,14 +10,17 @@
  */
 ?>
 
-		</div><!-- .row -->
-	</div><!-- #wrapper -->
-
 	<footer id="footer" role="contentinfo">
 		<div class="container">
 			<p>&copy; <?php echo date( 'Y' ); ?> <a href="<?php echo home_url(); ?>"><?php bloginfo( 'name' ); ?></a> - <?php _e( 'All rights reserved', 'odin' ); ?> | <?php echo sprintf( __( 'Powered by the <a href="%s" rel="nofollow" target="_blank">Odin</a> forces and <a href="%s" rel="nofollow" target="_blank">WordPress</a>.', 'odin' ), 'http://wpod.in/', 'http://wordpress.org/' ); ?></p>
 		</div><!-- .container -->
 	</footer><!-- #footer -->
+
+	<!-- jQuery -->
+	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
+
+	<!-- jQuery -->
+	<!-- <script src="<?php bloginfo( 'template_directory' ); ?>/assets/bootstrap/bootstrap.min.js"></script> -->
 
 	<?php wp_footer(); ?>
 </body>

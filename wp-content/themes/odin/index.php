@@ -14,35 +14,72 @@
  */
 
 get_header(); ?>
+	
+	<!-- SLIDER -->
+	<section class="content-section slider-section">
+		<div class="container">
+			<h1>
+				“INSIRA AQUI UM QUOTE<br/>
+				QUE DEFINA O TRABALHO DA MUSIC STATION”
+			</h1>
 
-	<main id="content" class="<?php echo odin_classes_page_sidebar(); ?>" tabindex="-1" role="main">
+			<div id="slider">
+				<img src="<?php bloginfo( 'template_directory' ); ?>/assets/images/teste-slider.jpg" style="width: 100%;" />
+			</div>
+		</div>
+	</section>
 
-			<?php
-				if ( have_posts() ) :
-					// Start the Loop.
-					while ( have_posts() ) : the_post();
+	<!-- SOBRE -->
+	<section class="content-section sobre-section">
+		<div class="container">
+			<h2 class="bebas">a music station</h2>
+			<p class="oswald subtitle">PRODUTORA DE SHOWS</p>
 
-						/*
-						 * Include the post format-specific template for the content. If you want to
-						 * use this in a child theme, then include a file called called content-___.php
-						 * (where ___ is the post format) and that will be used instead.
-						 */
-						get_template_part( 'content', get_post_format() );
+			<!-- VIDEO -->
+			<div class="content-video">
+				VIDEO
+			</div>
 
-					endwhile;
+			<!-- SHOWS | MISSÃO -->
+			<div class="col-md-6 content-desc">
+				<h3 class="">shows</h3>
+				<span class="oswald">o que fazemos?</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac orci in nibh blandit dapibus nec vitae risus. Morbi tempor, lacus quis sodales dignissim, ipsum mi vestibulum leo, in hendrerit augue leo a tellus. Ut eu faucibus elit, et feugiat quam. Aenean ut libero a sem venenatis aliquet. Integer semper, dolor at dignissim facilisis faucibus, ipsum ipsum rutrum eros, non vulputate facilisis.</p>
+			</div>
+			<div class="col-md-6 content-desc">
+				<h3 class="">missão</h3>
+				<span class="oswald">por que fazemos?</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ac orci in nibh blandit dapibus nec vitae risus. Morbi tempor, lacus quis sodales dignissim, ipsum mi vestibulum leo, in hendrerit augue leo a tellus. Ut eu faucibus elit, et feugiat quam. Aenean ut libero a sem venenatis aliquet. Integer semper, dolor at dignissim facilisis faucibus, ipsum ipsum rutrum eros, non vulputate facilisis.</p>
+			</div>
+		</div>
+	</section>
 
-					// Post navigation.
-					odin_paging_nav();
+	<!-- BLOG -->
+	<section class="content-section blog-section">
+		<div class="container">
+			<h2 class="bebas">news station</h2>
+			<p class="oswald subtitle">NOVIDADES SOBRE MÚSICA</p>
+		</div>
+	</section>
 
-				else :
-					// If no content, include the "No posts found" template.
-					get_template_part( 'content', 'none' );
+	<!-- GALERIA -->
+	<section class="content-section galeria-section">
+		<div class="container">
+			<h2 class="bebas">galeria</h2>
+			<p class="oswald subtitle">MOMENTOS</p>
+		</div>
+	</section>
 
-				endif;
-			?>
+	<!-- CONTATO -->
+	<section class="content-section contato-section">
+		<div class="container">
+			<h2 class="bebas">contato</h2>
+			<p class="oswald subtitle">FALE COM A GENTE!  SINTA-SE A VONTADE E DEIXE UMA MENSAGEM</p>
+		</div>
+	</section>
 
-	</main><!-- #content -->
+	<!-- <main id="content" class="<?php echo odin_classes_page_sidebar(); ?>" tabindex="-1" role="main"></main> -->
 
 <?php
-get_sidebar();
+// get_sidebar();
 get_footer();

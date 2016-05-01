@@ -20,6 +20,10 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/assets/js/html5.js"></script>
 	<![endif]-->
+
+	<!-- CSS - Default -->
+	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/assets/css/musicstation.css" type="text/css" />
+
 	<?php wp_head(); ?>
 </head>
 
@@ -32,74 +36,17 @@
 
 	<header id="header" role="banner">
 		<div class="container">
-			<div class="page-header hidden-xs">
-				<?php if ( is_home() ) : ?>
-					<h1 class="site-title">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</h1>
-					<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-				<?php else : ?>
-					<div class="site-title h1">
-						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-							<?php bloginfo( 'name' ); ?>
-						</a>
-					</div>
-					<div class="site-description h2">
-						<?php bloginfo( 'description' ); ?>
-					</div>
-				<?php endif ?>
+			<div class="col-md-6">AQUI</div>
+			<div class="col-md-6">AQUI</div>			
+		</div>
+	</header>
 
-				<?php
-					$header_image = get_header_image();
-					if ( ! empty( $header_image ) ) :
-				?>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
-						<img src="<?php echo esc_url( $header_image ); ?>" height="<?php esc_attr_e( $header_image->height ); ?>" width="<?php esc_attr_e( $header_image->width ); ?>" alt="" />
-					</a>
-				<?php endif; ?>
-			</div><!-- .site-header-->
 
-			<div id="main-navigation" class="navbar navbar-default">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-navigation">
-					<span class="sr-only"><?php _e( 'Toggle navigation', 'odin' ); ?></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand visible-xs-block" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
-						<?php bloginfo( 'name' ); ?>
-					</a>
-				</div>
-				<nav class="collapse navbar-collapse navbar-main-navigation" role="navigation">
-					<?php
-						wp_nav_menu(
-							array(
-								'theme_location' => 'main-menu',
-								'depth'          => 2,
-								'container'      => false,
-								'menu_class'     => 'nav navbar-nav',
-								'fallback_cb'    => 'Odin_Bootstrap_Nav_Walker::fallback',
-								'walker'         => new Odin_Bootstrap_Nav_Walker()
-							)
-						);
-					?>
-					<form method="get" class="navbar-form navbar-right" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
-						<label for="navbar-search" class="sr-only">
-							<?php _e( 'Search:', 'odin' ); ?>
-						</label>
-						<div class="form-group">
-							<input type="search" value="<?php echo get_search_query(); ?>" class="form-control" name="s" id="navbar-search" />
-						</div>
-						<button type="submit" class="btn btn-default"><?php _e( 'Search', 'odin' ); ?></button>
-					</form>
-				</nav><!-- .navbar-collapse -->
-			</div><!-- #main-navigation-->
 
-		</div><!-- .container-->
-	</header><!-- #header -->
 
-	<div id="wrapper" class="container">
-		<div class="row">
+
+
+
+
+
+
